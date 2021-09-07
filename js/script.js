@@ -20,12 +20,20 @@ function generateGrid(size) {
     }
 }
 
-function reset() {
+function reset(gridChange) {
+    let gridSize = parseInt(document.getElementById("gridSize").value, 10);
     let sketchpad = document.getElementById("sketchpad");
     while (sketchpad.lastElementChild) {
         sketchpad.removeChild(sketchpad.lastElementChild);
       }
-    generateGrid(20);
+    if(!gridChange) generateGrid(gridSize);
 }
 
-generateGrid(20);
+function updateGridSize() {
+    let gridSize = parseInt(document.getElementById("gridSize").value, 10);
+    document.getElementById("gridText").innerHTML = gridSize + "x" + gridSize;
+    reset(true);
+    generateGrid(gridSize);
+}
+
+generateGrid(16);

@@ -13,7 +13,7 @@
     <div class="main" id="main">
         <div class="menu">
             <div><span class="text">Grid Size: </span><span class="gridText" id="gridText">16x16</span></div>
-            <input type="range" min="12" max="64" value="16" class="slider" id="gridSize">
+            <input type="range" step="2" min="12" max="64" value="16" class="slider" id="gridSize" onchange="updateGridSize(this.value)">
             <button class="btn" onclick="reset()">CLEAR</button>
         </div>
         <div class="sketchpad" id="sketchpad">
