@@ -4,7 +4,7 @@ function paintSquare(e) {
 }
 
 function generateGrid(size) {
-    let elementSize = 500 / size;
+    let elementSize = 560 / size;
     let sketchpad = document.getElementById("sketchpad");
     for (let i = 1; i < size + 1; i++) {
         sketchpad.appendChild(document.createElement("div")).className = "grid";

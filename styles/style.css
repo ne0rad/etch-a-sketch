@@ -16,11 +16,11 @@
 }
 
 .menu {
-    height: 480px;
+    height: 540px;
     width: 200px;
     background-color: silver;
     margin-right: 30px;
-    box-shadow: 0 0 5px 1px black;
+    box-shadow: 0 0 5px 2px black;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -53,8 +53,8 @@
 }
 
 .sketchpad {
-    width: 500px;
-    height: 500px;
+    width: 560px;
+    height: 560px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 5px 2px black;
