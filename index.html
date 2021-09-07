@@ -11,13 +11,21 @@
 <body>
 
     <div class="main" id="main">
+        <div class="sketchpad" id="sketchpad"></div>
         <div class="menu">
-            <div><span class="text">Grid Size: </span><span class="gridText" id="gridText">16x16</span></div>
-            <input type="range" step="8" min="8" max="64" value="16" class="slider" id="gridSize" onchange="updateGridSize(this.value)">
+            <div class="menuItem">
+                <span class="text">Etch-A-Sketch App</span><br>
+                <span class="text">Made by ne0rad</span>
+            </div>
+            <div class="menuItem">
+                <span class="text">Color: </span><input type="color" id="color" name="color" value="#000000">
+            </div>
+
+            <div class="menuItem">
+                <span class="text">Grid Size: </span><span class="gridText" id="gridText">16x16</span>
+                <input type="range" step="8" min="8" max="64" value="16" class="slider" id="gridSize" onchange="updateGridSize(this.value)">
+            </div>
             <button class="btn" onclick="reset()">CLEAR</button>
-        </div>
-        <div class="sketchpad" id="sketchpad">
-            
         </div>
     </div>
     

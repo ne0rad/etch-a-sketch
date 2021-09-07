@@ -1,10 +1,11 @@
 function paintSquare(e) {
-    element = document.getElementById(e.currentTarget.id);
-    element.style.backgroundColor = "black";
+    let element = document.getElementById(e.currentTarget.id);
+    let color = document.getElementById("color").value;
+    element.style.backgroundColor = color;
 }
 
 function generateGrid(size) {
-    let elementSize = 560 / size;
+    let elementSize = 600 / size;
     let sketchpad = document.getElementById("sketchpad");
     for (let i = 1; i < size + 1; i++) {
         sketchpad.appendChild(document.createElement("div")).className = "grid";
