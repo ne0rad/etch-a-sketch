@@ -1,17 +1,31 @@
+function paintSquare(e) {
+    element = document.getElementById(e.currentTarget.id);
+    element.style.backgroundColor = "black";
+}
+
 function generateGrid(size) {
     let elementSize = 500 / size;
     let sketchpad = document.getElementById("sketchpad");
-    for (let i = 1; i < size+1; i++) {
+    for (let i = 1; i < size + 1; i++) {
         sketchpad.appendChild(document.createElement("div")).className = "grid";
         let grid = document.getElementsByClassName("grid");
-        grid = grid[grid.length-1];
-        for (let j = 1; j < size+1; j++) {
+        grid = grid[grid.length - 1];
+        for (let j = 1; j < size + 1; j++) {
             let square = grid.appendChild(document.createElement("div"));
             square.className = "square";
-            square.id = i.toString() + j.toString();
-            square.style = "width: " + elementSize +"px; height: " + elementSize + "px;";
+            square.id = i.toString() + "-" + j.toString();
+            square.style = "width: " + elementSize + "px; height: " + elementSize + "px;";
+            square.addEventListener("mouseover", paintSquare);
         }
     }
 }
 
-generateGrid(22);
+function reset() {
+    let sketchpad = document.getElementById("sketchpad");
+    while (sketchpad.lastElementChild) {
+        sketchpad.removeChild(sketchpad.lastElementChild);
+      }
+    generateGrid(20);
+}
+
+generateGrid(20);
