@@ -1,2 +1,4 @@
 # etch-a-sketch project assignment from The Odin Project.
-Making a simple sketching application using vanilla JS DOM manipulation.
+A simple sketching application made while learning vanilla JS DOM manipulation.
+
+Live preview: https://ne0rad.github.io/etch-a-sketch/
